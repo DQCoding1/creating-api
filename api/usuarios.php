@@ -85,6 +85,15 @@
       $nuevoUsuario = new Usuario($_POST["nombre"], $_POST["edad"], $_POST["pais"]);
       $nuevoUsuario->crearUsuario();
       echo "usuario creado : ", json_encode($_POST);
-    break;
+      break;
+
+    case "GET":
+      if (isset($_GET["id"])){
+
+      } else {
+        echo Usuario::obtenerUsuarios();
+      }
+      break;
+
   }                                            
 ?>
