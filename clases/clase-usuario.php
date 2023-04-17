@@ -9,5 +9,18 @@
       $this->edad = $edad;
       $this->pais = $pais;
     }
+
+    public function crearUsuario (){
+      $contenidoArchivo = file_get_contents("../data/usuarios.json");
+      $usuarios = json_decode($contenidoArchivo, true);
+      $usuarios[] = array(
+        "usuario" => $this->nombre,
+        "edad" => $this->edad,
+        "pais" => $this->pais
+      );
+      $archivo = fopen("../data/usuarios.json", "w");
+      fwrite($archivo, json_encode($usuarios));
+      fclose($archivo); 
+    }
   }  
 ?>

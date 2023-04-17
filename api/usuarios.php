@@ -65,5 +65,13 @@
     // ?id=1
 
     // echo "usuario a eliminar : " , $_GET["id"];
+  
     
+
+
+
+
+
+
+   
 ?>
