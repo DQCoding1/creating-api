@@ -1,4 +1,5 @@
 <?php 
+                                        // BASIC CONCEPTS
   // SABER TIPO DE PETICION:
   // echo "metodo https : ", $_SERVER["REQUEST_METHOD"], "<br/>";
   
