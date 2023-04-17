@@ -34,5 +34,19 @@
       $contenidoArchivo = json_decode(file_get_contents("../data/usuarios.json"), true);
       return json_encode($contenidoArchivo[$indice]);
     }
+
+
+    public function actualizarUsuario($indice){
+      $contenidoArchivo = file_get_contents("../data/usuarios.json");
+      $usuarios = json_decode($contenidoArchivo, true);
+      $usuarios[$indice] = array(
+        "nombre" => $this->nombre, 
+        "edad" => $this->edad, 
+        "pais" => $this->pais 
+      );
+      $archivo = fopen("../data/usuarios.json", "w");
+      fwrite($archivo, json_encode($usuarios));
+      fclose($archivo);
+    }
   }  
 ?>

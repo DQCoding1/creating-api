@@ -94,6 +94,7 @@
         echo Usuario::obtenerUsuarios();
       }
       break;
+      
+  }
 
-  }                                            
 ?>
