@@ -88,8 +88,8 @@
       break;
 
     case "GET":
-      if (isset($_GET["id"])){
-
+      if (isset($_GET["indice"])){
+        echo Usuario::obtenerUsuario($_GET["indice"]);
       } else {
         echo Usuario::obtenerUsuarios();
       }

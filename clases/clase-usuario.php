@@ -28,5 +28,11 @@
       $contenidoArchivo = file_get_contents("../data/usuarios.json");
       return $contenidoArchivo;
     }
+
+
+    public static function obtenerUsuario($indice){
+      $contenidoArchivo = json_decode(file_get_contents("../data/usuarios.json"), true);
+      return json_encode($contenidoArchivo[$indice]);
+    }
   }  
 ?>
