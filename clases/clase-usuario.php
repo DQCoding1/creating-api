@@ -4,7 +4,7 @@
     private $edad;
     private $pais;
 
-    public function __contruct($nombre, $edad, $pais){
+    public function __construct($nombre, $edad, $pais){
       $this->nombre = $nombre;
       $this->edad = $edad;
       $this->pais = $pais;

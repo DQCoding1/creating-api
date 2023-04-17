@@ -73,5 +73,18 @@
 
 
 
-   
+
+                                            // CRUD
+  header("Content-Type: application/json");                                            
+  include_once("../clases/clase-usuario.php");
+
+
+  switch($_SERVER["REQUEST_METHOD"]){
+    case "POST":
+      $_POST = json_decode(file_get_contents("php://input"), true);
+      $nuevoUsuario = new Usuario($_POST["nombre"], $_POST["edad"], $_POST["pais"]);
+      $nuevoUsuario->crearUsuario();
+      echo "usuario creado : ", json_encode($_POST);
+    break;
+  }                                            
 ?>

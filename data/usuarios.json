@@ -1,5 +1,1 @@
-[
-  {"nombre": "juan", "edad": 13, "pais": "colombia"},
-  {"nombre": "angie", "edad": 27, "pais": "honduras"},
-  {"nombre": "pedro", "edad": 42, "pais": "guatemala"}
-]
+[{"nombre":"juan","edad":13,"pais":"colombia"},{"nombre":"angie","edad":27,"pais":"honduras"},{"nombre":"pedro","edad":42,"pais":"guatemala"},{"usuario":"laura","edad":33,"pais":"colombia"}]
