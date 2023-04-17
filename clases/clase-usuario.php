@@ -22,5 +22,11 @@
       fwrite($archivo, json_encode($usuarios));
       fclose($archivo); 
     }
+
+
+    public static function obtenerUsuarios(){
+      $contenidoArchivo = file_get_contents("../data/usuarios.json");
+      return $contenidoArchivo;
+    }
   }  
 ?>
