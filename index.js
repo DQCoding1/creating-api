@@ -39,5 +39,33 @@ const crearUsuario = () => {
   .catch(err => console.log(err))
 }
 
-crearUsuario()
+// crearUsuario()
+// traerTodosLosUsuarios()
+
+
+
+
+
+const actualizarUsuario = (indice) => {
+  const options = {
+    method: "PUT",
+    body: JSON.stringify(
+      {
+        nombre: "valeria",
+        edad: 33,
+        pais: "eeuu"
+      }),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  }
+
+  fetch(`./api/usuarios.php?indice=${indice}`, options)
+  .then(res => res.json())
+  .then(data => console.log(data))
+  .catch(err => console.log(err))
+}
+
+
+actualizarUsuario(3)
 traerTodosLosUsuarios()

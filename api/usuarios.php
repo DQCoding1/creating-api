@@ -101,7 +101,8 @@
       $_PUT = json_decode(file_get_contents("php://input"), true);
       $usuario = new Usuario($_PUT["nombre"], $_PUT["edad"], $_PUT["pais"]);
       $usuario->actualizarUsuario($_GET["indice"]);
-      echo "usuario de indice {$_GET['indice']} actualizado con : ", json_encode($_PUT);
+      $message = array("usuarioActualizado" => $_PUT);
+      echo json_encode($message);
       break;
 
 
