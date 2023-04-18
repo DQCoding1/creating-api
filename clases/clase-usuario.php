@@ -14,7 +14,7 @@
       $contenidoArchivo = file_get_contents("../data/usuarios.json");
       $usuarios = json_decode($contenidoArchivo, true);
       $usuarios[] = array(
-        "usuario" => $this->nombre,
+        "nombre" => $this->nombre,
         "edad" => $this->edad,
         "pais" => $this->pais
       );

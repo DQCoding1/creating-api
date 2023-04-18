@@ -84,7 +84,8 @@
       $_POST = json_decode(file_get_contents("php://input"), true);
       $nuevoUsuario = new Usuario($_POST["nombre"], $_POST["edad"], $_POST["pais"]);
       $nuevoUsuario->crearUsuario();
-      echo "usuario creado : ", json_encode($_POST);
+      $message = array("usuarioCreado" => $_POST);
+      echo json_encode($message);
       break;
 
     case "GET":
