@@ -5,4 +5,15 @@ const traerTodosLosUsuarios = ()=> {
     .catch(err =>console.log(err))
 }
 
-traerTodosLosUsuarios()
+// traerTodosLosUsuarios()
+
+
+
+const traerUsuarioEspecifico = (indice) => {
+  fetch(`./api/usuarios.php?indice=${indice}`)
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch()
+}
+
+traerUsuarioEspecifico(0)
