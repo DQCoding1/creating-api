@@ -67,5 +67,29 @@ const actualizarUsuario = (indice) => {
 }
 
 
-actualizarUsuario(3)
+// actualizarUsuario(3)
+// traerTodosLosUsuarios()
+
+
+
+
+
+
+
+const borrarUsuario = (indice) => {
+  const options = {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json"
+    }
+  }
+
+  fetch(`./api/usuarios.php?indice=${indice}`, options)
+  .then(res => res.json())
+  .then(data => console.log(data))
+  .catch(err => console.log(err))
+}
+
+
+borrarUsuario(3)
 traerTodosLosUsuarios()

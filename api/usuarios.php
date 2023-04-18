@@ -108,7 +108,8 @@
 
     case "DELETE":
       Usuario::borrarUsuario($_GET["indice"]);
-      echo "usuario {$_GET['indice']} eliminado";
+      $message = array("eliminado" => "usuario {$_GET['indice']}");
+      echo json_encode($message);
       break;
   }
 
