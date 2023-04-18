@@ -48,5 +48,15 @@
       fwrite($archivo, json_encode($usuarios));
       fclose($archivo);
     }
+
+
+    public static function borrarUsuario($indice){
+      $contenidoArchivo = file_get_contents("../data/usuarios.json");
+      $usuarios = json_decode($contenidoArchivo);
+      array_splice($usuarios, $indice, 1);
+      $archivo = fopen("../data/usuarios.json", "w");
+      fwrite($archivo, json_encode($usuarios));
+      fclose($archivo);
+    }
   }  
 ?>
