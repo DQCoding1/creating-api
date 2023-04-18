@@ -102,6 +102,12 @@
       $usuario->actualizarUsuario($_GET["indice"]);
       echo "usuario de indice {$_GET['indice']} actualizado con : ", json_encode($_PUT);
       break;
+
+
+    case "DELETE":
+      Usuario::borrarUsuario($_GET["indice"]);
+      echo "usuario {$_GET['indice']} eliminado";
+      break;
   }
 
 ?>
